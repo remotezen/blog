@@ -1,0 +1,24 @@
+<head>
+<%= css :application, :media => 'screen' %>
+<%= js  :app %>
+</head>
+<body>
+<div class="units-row">
+  <div class="unit-100">
+    <%=img 'header.jpg' %>
+</div>
+</div>
+
+<div class="units-row">
+  <div class="unit-30">
+    <%=yield%>
+</div>
+<div class="unit-70">
+  fred
+</div>
+
+</div>
+
+  <%=yield %>
+</body>
+

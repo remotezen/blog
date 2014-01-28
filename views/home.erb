@@ -1,0 +1,16 @@
+<h6>Jo's Blog</h6>
+ <% posts.each do |post| %>
+   <ul class="posts">
+     <li class="post" id="<%=post.id %>">
+     <span class="title">
+       <p>
+          <%=post.title %>
+       </p>
+   </span>
+   <span class="body">
+     post.body
+     <%=wrap_long_string post.body %>
+ </span>
+     </li>
+   </ul>
+ <% end %>
