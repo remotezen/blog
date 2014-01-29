@@ -10,3 +10,5 @@ gem "sqlite3"
 gem "shotgun"
 gem 'sinatra-mapping'
 gem "tux"
+gem "puma"
+gem "rerun"

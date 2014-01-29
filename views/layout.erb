@@ -4,21 +4,27 @@
 </head>
 <body>
 <div class="units-row">
-  <div class="unit-100">
-    <%=img 'header.jpg' %>
+  <div class="unit-centered unit-40">
+    <%= img '/images/header.png' %>
+  </div>
 </div>
-</div>
-
-<div class="units-row">
-  <div class="unit-30">
-    <%=yield%>
-</div>
-<div class="unit-70">
-  fred
-</div>
-
-</div>
-
-  <%=yield %>
+  <div class="units-row">
+    <div class="unit-centered unit-40">
+      <nav class="nav-tabs">
+          <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><span>Item 2</span></li>
+              <li><a href="#">Item 3</a></li>
+              <li><a href="#">Item 4</a></li>
+              <li><a href="#">Item 5</a></li>
+          </ul>
+    </nav>
+    </div>
+  </div>
+  <div class="units-row">
+    <div class="unit-centered unit-40">
+          <%=yield%>
+    </div>
+  </div>
 </body>
 

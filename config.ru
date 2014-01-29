@@ -1,4 +1,4 @@
 require './environments'
 require './app'
 
-run Sinatra::Application
+rerun ruby 'app.rb'
