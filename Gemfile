@@ -8,7 +8,7 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem "sqlite3"
 gem "shotgun"
-gem 'sinatra-mapping'
+gem 'sinatra-trails'
 gem "tux"
 gem "puma"
 gem "rerun"

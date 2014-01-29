@@ -1,16 +1,18 @@
-require 'sinatra/mapping'
 require File.expand_path('../config/environments.rb', __FILE__)
+$: << File.dirname(__FILE__) + "/lib"
+require 'sinatra/word_wrap'
 
 
 
 class App < Sinatra::Base
  set :root, File.dirname(__FILE__) # You must set app root
  register Sinatra::AssetPack 
- use Rack::CommonLogger
+ register Sinatra::Trails
 
 #configure { set :server, :puma }
- #helpers Sinatra::WordWrap
-  #map :home, ''
+ #
+ helpers Sinatra::WordWrap
+
 
   assets {
     serve '/js',     from: 'app/js'        # Default
@@ -36,7 +38,9 @@ after do
 end
  
   
- get '/' do
+ map :home, :to=> '/'
+ 
+ get path_for(:home) do
     @posts = Post.order("created_at DESC")
     @title = "Welcome."
     erb :home, :locals => { :posts => @posts}
